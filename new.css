@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* selector universal: todos os elementos comprirao o que esta nas chaves
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 15px 15px 5px 15px;
+	/*caixa flexivel*/
+	display: flex;
+	/* se os elementos nao cabem numa linea, irao para abaixo*/
+	flex-wrap: wrap;
+	/*mudar a caixa flexivel para a vertical*/
+	flex-direction: column;
+	/*separar os elementos*/
+	/* body toda a altura do navegador */
+	min-height: 100vh;
+
+	color: black;
+	font-family: roboto-mono, monospace;
+	font-weight: 400;
+	font-style: normal;
+}
+
+body.home {
+	background-image: url("images/background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+body:not(.home) {
+	/* centra elementos da caixa flexivel vertical. so funciona pq body tem "display: flex;"*/
+	align-items: center;
+}
+
+.logo {
+	/* vai medir 24% da largura mas nao menos do que 200px */
+	width: max(24vw,200px);
+}
+
+.home nav {
+	/* 24px no minimo e acrescenta quando cresce a largura da tela */
+	padding-top: max(24px, calc(24px + 5vw));
+}
+
+a {
+	color: black;
+	text-decoration: none;
+	font-size: max(24px, 2vw);
+}
+
+.home a {
+	display: block;
+}
+
+nav a {
+	/*padding 1em: encima e embaixo, 0: direita e esquerda*/
+	padding: 1em 0 1em 1em;
+}
+
+.home a {
+	color: white;
+}
+
+a:hover {
+	color: gray;
+}
+
+.side {
+	margin: auto 0;
+	padding-left: 1em;
+}
+
+footer {
+	width: 100%;
+	/*enviar para baixo*/
+	margin-top: auto;
+	text-align: center;
+}
+
+.home footer {
+	color: white;
+}
+
+footer p {
+	margin: 0;
+	font-size: 12;
+}
+
+/*paginas com fotos*/
+
+.slider {
+	background-color: black;
+	min-height: 50vh;
+	width: 100%;
+}
+
+/*quando o navegador mede mais do que 1200px*/
+
+@media (min-width: 1200px) {
+	body:not(.home) {
+	/* centra elementos da caixa flexivel vertical. so funciona pq body tem "display: flex;"*/
+	align-items: flex-start;
+	flex-direction: row;
+	justify-content: space-between;
+
+}
+	.home header {
+		/*vai crescer para enviar "side" para baixo*/
+		flex-grow: 1;
+	}
+
+	.side {
+
+		/*vai para o fim*/
+		align-self: flex-end;
+		margin: 0;
+		/*cresce para aumentar tamanho*/
+		flex-grow: 1;
+		text-align: right;
+		/*padding igual ao tamanho do texto*/
+		padding-right: 1em;
+	}
+
+nav {
+	/* 24px no minimo e acrescenta quando cresce a largura da tela */
+	padding-top: max(24px, calc(24px + 5vw));
+}
+
+a {
+	display: block;
+}
+
+nav a {
+	/*padding 1em: encima e embaixo, 0: direita e esquerda*/
+	padding: 1em 0 1em 1em;
+}
+
+.home nav a:first-of-type {padding-left: 20px;
+}
+
+.home nav a:nth-of-type(2) {
+	padding-left: 3.7em;
+}
+
+.home nav a:last-of-type {
+	padding-left: 6em;
+	padding-bottom: .35em;
+}
+
+.slider {
+	background-color: black;
+	min-height: 50vh;
+	width: 50%;
+	align-self: center;
+}
+}

@@ -1,0 +1,374 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* universal selector: what's inside the keys will apply to all elements
+*/
+
+* {
+	box-sizing: border-box;
+    }
+
+body {
+	margin: 0;
+	padding: 15px 15px 5px 15px;
+	/*flex box*/
+	display: flex;
+	/* if elements don't fit on same line, they display underneath */
+	flex-wrap: wrap;
+	/* change flex box to vertical */
+	flex-direction: column;
+	/* separate the elements */
+	/* body browser height */
+	min-height: 100vh;
+
+	color: black;
+	font-family: acumin-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+	background-color: white;
+    }
+
+body.home {
+	background-image: url("images/background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+    }
+
+body:not(.home) {
+	/* centers the elements of vertical flex box. only works because of "display: flex;"*/
+	align-items: center;
+    }
+
+nav.aboutcontact {
+	flex-direction: row;
+    }
+
+.top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    }
+
+.logo {
+	/* size will be 24% of height but no less than 200px */
+	width: max(24vw,200px);
+    }
+
+.openbtn {
+	padding-top: 0;
+    }
+a {
+	color: black;
+	text-decoration: none;
+	font-size: 1.8vw;
+	font-size: max(24px);
+    }
+
+.home nav {
+	/* at least 24px and grows as screen grows*/
+	padding-top: max(24px, calc(24px + 5vw));
+    }
+
+.home a {
+	display: block;
+	color: white;
+    }
+
+.home nav a {
+	/* padding 1em: up and down, 0: right and left */
+	margin-left: 0;
+	padding: 1em;
+	padding-left: 0;
+    }
+
+.home nav a:hover {
+	padding: .2em 0 0 .5em;
+	margin-bottom: -.25em;
+    }
+
+body:not(.home) a {
+	margin: 5px;
+    }
+
+.twolanguage .eng {
+	display: inline-block;
+    }
+
+.twolanguage:hover .eng {
+	display: none;
+    }
+
+.twolanguage .port {
+	display: none;
+    }
+
+.twolanguage:hover .port {
+	display: inline-block;
+	color: gray;
+	font-family: mrsheffield-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+
+.side {
+	margin: auto 0;
+	padding-left: 1em;
+    }
+
+.side a {
+	margin:1em 0;
+    }
+
+.side a:hover {
+	margin-top: 0em;
+	margin-bottom: -.55em
+    }
+
+.side a:last-of-type:hover {
+	padding-top: 0;
+	margin-bottom: -.55em;
+    }
+
+footer {
+	width: 100%;
+	/* send to bottom */
+	margin-top: auto;
+	text-align: center;
+    }
+
+.home footer {
+	color: white;
+    }
+
+footer p {
+	margin: 0;
+	font-size: 10px;
+    }
+
+/* pages with photos */
+
+.slider {
+	display: flex;
+	align-items: center;
+	width: max(200px, 90%);
+	margin: auto;
+    }
+
+.swiper-slide {
+	text-align: center;
+}
+
+.slider img {
+	/*width: max(250px, calc(50vw - 15px));*/
+	height: 100%;
+	width: 80%;
+    }
+
+.swiper-button-next,
+.swiper-button-prev {
+	/*display: flex;
+	position: relative;*/
+	color: gray;
+    }
+
+/*.swiper-button-next {
+	display:flex;
+	position: relative;
+	z-index: 2;
+	left: 61vw;
+}*/
+
+/*.swiper-container {
+	position: fixed;
+	top: 25%;
+    left: 25%;
+    } */
+
+.text {
+	text-align: center;
+	margin-top: 25%;
+	opacity: 70%;
+    }
+
+.text img {
+	width: 25px;
+    }
+
+.box{
+	width: 80vw;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+}
+p {
+	width: 30vw;
+}
+
+.photo img {
+	width: 30vw;
+    }
+
+.aboutme {
+    }
+
+
+@media screen and (max-width: 1000px) {
+
+body:not(.home) nav {
+	display: none;
+	}
+
+}
+
+/*when browser is larger than 1200px*/
+
+@media (min-width: 1000px) {
+
+#main {
+	display: none;
+	}
+
+.home header {
+	/* will grow and push "side" down */
+	flex-grow: 1;
+	}
+
+:not(.home) header{
+	height: 100%;
+	}
+
+.logo {
+	width: min(28vw);
+	min-width: 200px;
+	max-width: 250px;
+	}
+
+.home nav {
+	/* minimum 24px and grows as screen gets larger */
+	padding-top: max(24px, calc(24px + 5vw));
+    }
+
+body:not(.home) {
+	/* centers elements of vertical flex box. only works because "display: flex;" */
+	align-items: flex-start;
+	flex-direction: row;
+	justify-content: space-between;
+    }
+
+.home .side a:hover:last-of-type {
+	padding-bottom: .35em;
+	padding-top: 0;
+	}
+
+.side {
+	/*goes to end*/
+	align-self: flex-end;
+	margin: 0;
+	/*grows*/
+	/*flex-grow: 1;*/
+	text-align: right;
+	/*padding same as text size*/
+	padding-right: 1em;
+	}
+
+a {
+	display: block;
+    }
+
+.twolanguage:hover .port {
+	display: inline-block;
+	color: gray;
+	font-family: mrsheffield-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+	font-size: 2em;
+    }
+
+nav a {
+	/*em: text size*/
+	padding: 1em 0 1em 1em;
+    }
+
+nav a:nth-of-type(4) {
+	padding-top: 2em;
+	}
+
+nav a:hover {
+	padding-top: 0;
+	padding-bottom: 0;
+	}
+
+nav a:first-of-type:hover {
+	padding-top: 1.05em;
+    }
+
+nav a:nth-of-type(2):hover {
+	padding-top: 1em;
+    }
+
+nav a:nth-of-type(3):hover {
+	padding-top: 1em;
+    }
+
+nav a:nth-of-type(4):hover {
+	padding-top: 2em;
+    }
+
+nav a:last-of-type:hover {
+	padding-top: 1em;
+    }
+
+.home nav a:first-of-type {
+	padding-left: 20px;
+    }
+
+.home nav a:nth-of-type(2) {
+	padding-left: 3.7em;
+    }
+
+.home nav a:last-of-type {
+	padding-left: 6em;
+	padding-bottom: .35em;
+    }
+
+.home nav a:first-of-type:hover {
+	padding-left: 20px;
+	padding-bottom: 0;
+    }
+
+.home nav a:nth-of-type(2):hover {
+	padding-left: 3em;
+    }
+
+.home nav a:last-of-type:hover {
+	padding-left: 6.5em;
+    }
+
+.home nav a:hover {
+		padding-top: 1.05em;
+		margin-bottom: 0;
+	}
+
+/*.slider {
+	position: fixed;
+	top: 10%;
+    left: 30%;
+
+	min-height: 50vh;
+	width: 50%;
+	align-self: center;
+    }
+*/
+
+.slider {
+	width: max(200px, 50%);
+	height: max(40vh);
+	margin-left: auto;
+	margin-right: 180px;
+    }
+
+
+
+}

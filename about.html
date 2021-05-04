@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>aNogueira about</title>
+
+<!-- for mobile and tablet -->
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+<!-- type css -->
+<link rel="stylesheet" href="https://use.typekit.net/vzr7fck.css">
+
+<!-- style css -->
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<!-- hamburger menu -->
+<style type="text/css">
+
+.container {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+	/*********** THE SIDE BAR MENU *********/
+
+.sidebar {
+	height: 100%;
+	/* 100% Full-height */
+	width: 100%;
+	/* 0 width - change this with JavaScript */
+	position:fixed;
+	/* Stay in place */
+	z-index: 10;
+	/* Stay on top */
+	top: -100%;
+	left: 0;
+	background-color: lightgray;
+	opacity: 70%;
+	/* white*/
+	overflow-x: hidden;
+	/* Disable horizontal scroll */
+	padding-top: 100px;
+	/* Place content 100px from the top */
+	transition: 0.5s;
+	/* 0.5 second transition effect to slide in the sidebar */
+    }
+/* The sidebar links */
+
+.sidebar a {
+	padding: 8px 8px 8px 8px;
+	text-decoration: none;
+	font-size: 18px;
+	color: black;
+	display: block;
+	transition: 0.3s;
+	text-align: center;
+}
+
+/* When you mouse over the navigation links, change their color */
+
+.sidebar a:hover {
+	color: #f1f1f1;
+}
+/* Position and style the close button (top right corner) */
+
+.sidebar .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+/* The button used to open the sidebar */
+
+.openbtn {
+	font-size: 30px;
+	cursor: pointer;
+	border: none;
+	float: right;
+	color: gray;
+}
+.openbtn:hover {
+	background-color: none;
+	color: black;
+}
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+#main {
+	transition: .5s;
+	/* If you want a transition effect */
+
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+	.sidebar {
+		padding-top: 15px;
+	}
+	.sidebar a {
+		font-size: 18px;
+	}
+}
+/*********** END OF HAMBURGER MENU *********/
+</style>
+
+</head>
+
+
+<body class="aboutcontact">
+<header>
+	<div class="top">
+
+		<div class="logo">
+			<a href="index.html"><img src="logo/logo_black.svg" alt="a Nogueira photography"></a>
+		</div>
+
+		<div class="container">
+			<div class="sidebar" id="mySidebar">
+				<a class="closebtn" href="javascript:void(0)" onclick="closeNav()">&times;</a>
+				<a href="portrait.html">PORTRAIT</a>
+				<a href="nature.html" target="_blank">NATURE</a>
+				<a href="color.html" target="_blank">COLOR</a>
+				<a href="about.html" target="_blank">ABOUT</a>
+				<a href="contact" target="_blank">CONTACT</a>
+			</div>
+
+		    <div id="main">
+				<div class="openbtn" onclick="openNav()">
+					&#9776;
+				</div>
+			</div>
+
+			<script>
+			    function openNav() {
+					document.getElementById("mySidebar").style.top = "0";
+					//document.getElementById("main").style.marginLeft = "250px";
+			                 }
+
+			    function closeNav() {
+					document.getElementById("mySidebar").style.top = "-100%";
+					//document.getElementById("main").style.marginLeft= "0";
+			                 }
+			</script>
+		</div>
+		</div>
+
+
+			<nav>
+			<a href="portrait.html" class="twolanguage">
+				<span class="eng">PORTRAIT</span>
+				<span class="port">Retrato</span>
+			</a>
+			<a href="nature.html" class="twolanguage">
+				<span class="eng">NATURE</span>
+				<span class="port">Natureza</span>
+			</a>
+			<a href="color.html" class="twolanguage">
+				<span class="eng">COLOR</span>
+				<span class="port">Cor</span>
+			</a>
+			<a href="about.html" class="twolanguage">
+				<span class="eng">ABOUT</span>
+				<span class="port">Sobre</span></a>
+			<a href="contact" class="twolanguage">
+				<span class="eng">CONTACT</span>
+				<span class="port">Contato</span></a>
+	        </nav>
+
+
+</header>
+
+
+	<div class="box">
+
+		<p>Originally from Rio de Janeiro, Brasil, I, Ana Nogueira, have been in an eternal quest to discover the beauty within the small things. Throughout my life, I have always been drawn to the moments of introspection, in which life slows down and becomes a simple act of feeling, existing, and letting things be. I have found, and continue to find, in those moments, the connection between one and all, and the openness for endless possibilities. Being a profound admirer of this present, I have found in photography the means to express my vision and appreciation towards it. That is why my work is, first and foremost, an ode to the beauty of the small moments.</p>
+
+
+		<div class="photo">
+			<img src="images/retratoaj.jpg">
+		</div>
+
+	</div>
+
+
+</body>
+</html>
