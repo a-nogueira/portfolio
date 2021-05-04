@@ -195,19 +195,29 @@ footer p {
     }
 
 .box{
-	width: 80vw;
+	max-width: 40rem;
 	margin: auto;
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
 
+	padding: 2em 0;
 }
-p {
+.box p {
+	margin-left: -2em;
+	margin-right: 1em;
+	width: 30vw;
+	margin-top:0;
+	margin-bottom: 0;
+}
+
+.box div {
+	margin-right: -2em;
+	margin-left: 1em;
 	width: 30vw;
 }
 
-.photo img {
-	width: 30vw;
+.box img {
+	width: 100%;
     }
 
 .aboutme {
@@ -239,7 +249,33 @@ body:not(.home) nav {
 	height: 100%;
 	}
 
-.logo {
+.aboutcontact header {
+	height: unset;
+	display: flex;
+	width: 100%;
+	}
+
+.aboutcontact nav {
+	display: flex;
+	align-items: center;
+	max-width: 800px;
+	margin: auto;
+	flex-grow: 1;
+	}
+
+.aboutcontact nav a	{
+	padding: 1em !important;
+	width: 20%;
+	text-align: center;
+	flex-shrink: 0;
+	}
+
+.aboutcontact nav a > * {
+		padding: 0 !important;
+		margin-bottom: -.5em !important;
+	}
+
+	.logo {
 	width: min(28vw);
 	min-width: 200px;
 	max-width: 250px;
@@ -369,6 +405,9 @@ nav a:last-of-type:hover {
 	margin-right: 180px;
     }
 
-
+.box {
+	background-color: lightgray;
+	align-items: center;
+	}
 
 }
