@@ -61,7 +61,7 @@ a {
 	color: black;
 	text-decoration: none;
 	font-size: 1.8vw;
-	font-size: max(24px);
+	font-size: max(18px);
     }
 
 .home nav {
@@ -186,7 +186,7 @@ footer p {
 
 .text {
 	text-align: center;
-	margin-top: 25%;
+	margin: auto;
 	opacity: 70%;
     }
 
@@ -197,23 +197,20 @@ footer p {
 .box{
 	max-width: 40rem;
 	margin: auto;
-	display: flex;
-	justify-content: space-between;
-
 	padding: 2em 0;
 }
+
 .box p {
-	margin-left: -2em;
-	margin-right: 1em;
-	width: 30vw;
 	margin-top:0;
 	margin-bottom: 0;
 }
 
 .box div {
-	margin-right: -2em;
-	margin-left: 1em;
-	width: 30vw;
+	width: 35vw;
+	min-width: 10em;
+	float: right;
+	padding-left: 1em;
+	padding-bottom: 1em;
 }
 
 .box img {
@@ -261,6 +258,8 @@ body:not(.home) nav {
 	max-width: 800px;
 	margin: auto;
 	flex-grow: 1;
+	margin-right: 20%;
+
 	}
 
 .aboutcontact nav a	{
@@ -289,7 +288,6 @@ body:not(.home) nav {
 body:not(.home) {
 	/* centers elements of vertical flex box. only works because "display: flex;" */
 	align-items: flex-start;
-	flex-direction: row;
 	justify-content: space-between;
     }
 
@@ -311,6 +309,7 @@ body:not(.home) {
 
 a {
 	display: block;
+	font-size: max(22px);
     }
 
 .twolanguage:hover .port {
@@ -399,15 +398,49 @@ nav a:last-of-type:hover {
 */
 
 .slider {
-	width: max(200px, 50%);
-	height: max(40vh);
+	/*ajuste aqui com as fotos: width e height*/
+	/*align-items nao funciona*/
+	/*width: max(800px, 50%)*/;
+	width: max(50%);
+	height: max(75%);
 	margin-left: auto;
 	margin-right: 180px;
+	align-items: center;
     }
 
 .box {
 	background-color: lightgray;
 	align-items: center;
+	margin-bottom: 7em;
+	}
+
+body:not(.home):not(.aboutcontact) nav {
+		margin-top: 5vh;
+	}
+
+.box{
+	display: flex;
+	justify-content: space-between;
+}
+
+.box p {
+	width: 30vw;
+	margin-left: -2em;
+	margin-right: 1em;
+}
+
+.box div {
+	margin-right: -2em;
+	margin-left: 1em;
+	width: 30vw;
+	float: unset;
+	order: 1;
 	}
 
 }
+/*editei fonte a*/
+/*about na tela celular: procurar solucao para vazio embaixo da imagem*/
+
+
+
+
