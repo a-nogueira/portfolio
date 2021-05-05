@@ -289,7 +289,12 @@ body:not(.home) {
 	/* centers elements of vertical flex box. only works because "display: flex;" */
 	align-items: flex-start;
 	justify-content: space-between;
+    flex-direction: row;
     }
+
+body.aboutcontact {
+    flex-direction: column;
+}
 
 .home .side a:hover:last-of-type {
 	padding-bottom: .35em;
